@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add Book</title>
+  </head>
+  <body>
+    <h2>Add a New Book</h2>
+
+    <form action="{{ url_for('add') }}" method="POST">
+      <p>
+        <label for="title">Book Title:</label>
+        <input id="title" name="title" type="text" required /> </p>
+      <p>
+        <label for="author">Book Author:</label>
+        <input id="author" name="author" type="text" required />
+      </p>
+      <p>
+        <label for="rating">Rating (e.g., 7.5):</label>
+        <input id="rating" name="rating" type="text" required /> </p>
+      <button type="submit">Add Book</button>
+    </form>
+
+    <p><a href="{{ url_for('home') }}">Back to Library</a></p>
+  </body>
+</html>
